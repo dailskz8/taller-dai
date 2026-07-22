@@ -7,7 +7,7 @@
 /* variables de color*/
 :root {
     --primary: #2c3e50;
-    --secondary: #3498db;
+    --secondary: #21862f;
     --accent: #e74c3c;
     --succes: #2ecc71;
     --light: #ecf0f1;
@@ -16,13 +16,25 @@
     --shadow: rgba(0, 0, 0, 0.1);
 }
 
-/* Estilos generales */
+.logo-img {
+    max-height: 45px;
+    width: auto;
+    display: block;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: linear-gradient(135deg, var(--secondary), #2c3e50);
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: row, column;
+    justify-content: center, space-between, flex-start, flex-end;
+    align-items: center, stretch, flex-start, flex-end;
     min-height: 100vh;
     padding: 20px;
 }
@@ -44,6 +56,7 @@ body {
     width: 100%;
     max-width: 100%;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
 }
 
 .login-card:hover {
@@ -53,6 +66,10 @@ body {
 
 /* Header de la tarjeta */
 header { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
     text-align: center;
     margin-bottom: 30px;
 }
@@ -101,7 +118,7 @@ input:valid:not(:placeholder-shown) {
 
 /* Checkbox */
 .checkbox {
-    display: flex;
+    display: flexbox;
     align-items: center;
     gap: 10px;
 }

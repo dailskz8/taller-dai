@@ -2,18 +2,22 @@
 <html lang="en">
 
     <head>
-|       <meta charset="UTF-8">
-        <meta name="viewport" content="width-device-width, initial-scale=1.0">
-        <title>MiCRM - Iniciar Sesión</title>
-        <link rel="styleset" href="estilo.css">
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width-device-width, initial-scale=1.0">
+        <title> MiCRM </title>
+        <link rel="stylesheet" href="estilo.css">
+        <img src="imagenes/logo-iujo.png" alt="Logo IUJO" class="logo-img">
+        
     </head>
 
     <body>
+
         <main class="login-card">
-            <section class="login-card">
+            <section id="login" class="login-card">
                 <header>
                     <h1>MiCRM</h1>
-                    <p>Iniciar Sesión</p>
+                    <h2>Iniciar Sesión</h2>
+                    
                 </header>
 
                 <form action="#" method="POST">
@@ -39,9 +43,78 @@
 
                 <footer>
                     <a href="#">¿Olvidaste tu contraseña?</a>
-                    <a href="#">Registrarse</a>
+                    <a href="#registro">Registrarse</a>
                 </footer>
             </section>
+
+            <section id="registro" class="login-card">
+                <header>
+                    <h3>Registrarse</h3>
+                </header>
+                <form action="#" method="POST" class="form-grid">
+                    <div class="form-group">
+                        <label for="reg-name"> Nombre Completo</label>
+                        <input type="text" id="reg-name" name="name" placeholder="Ej. Juan Perez">
+                    </div>
+                </form>
+
+    
+                <div class="form-group">
+                        <label for="reg-cedula"> Cédula</label>
+                <input type="text" id="reg-cedula" name="cedula" required pattern="[0-9]{8,10}" placeholder="Ej. 12345678">
+                 </div>
+
+    
+                <div class="form-group">
+                    <label for="reg-email">Correo Electrónico</label>
+                    <input type="email" id="reg-email" name="email" required placeholder="usuario@gmail.com">
+                </div>
+
+        
+              <div class="form-group">
+                 <label for="reg-telefono">Teléfono</label>
+                <input type="tel" id="reg-telefono" name="telefono" required pattern="[0-9]{11}" placeholder="04121234567">
+            </div>
+
+    
+             <div class="form-group full-width">
+                <label for="reg-direccion">Dirección</label>
+                <textarea id="reg-direccion" name="direccion" rows="3" placeholder="Dirección de residencia"></textarea>
+                </div>
+
+       
+                <div class="form-group">
+                    <fieldset class="grid-fieldset">
+                        <legend>Tipo de Cliente</legend>
+                <div class="radio-options">
+                    <label><input type="radio" name="tipo_cliente" value="natural" checked required> Natural</label>
+                    <label><input type="radio" name="tipo_cliente" value="juridico"> Jurídico</label>
+                </div>
+            </fieldset>
+        </div>
+
+        <div class="form-group">
+            <label for="reg-sector">Sector / Industria</label>
+            <select id="reg-sector" name="sector" required>
+                <option value="" disabled selected>Seleccione una opción</option>
+                <option value="tecnologia">Tecnología</option>
+                <option value="comercio">Comercio</option>
+                <option value="salud">Salud</option>
+                <option value="educacion">Educación</option>
+            </select>
+        </div>
+
+        <div class="form-group full-width">
+            <button type="submit" class="btn-primary">Registrar Cliente</button>
+        </div>
+
+    </form>
+
+    <footer>
+        <a href="#login">¿Ya tienes cuenta? Inicia sesión</a>
+    </footer>
+</section>
+
         </main>
     </body>
 
