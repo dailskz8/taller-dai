@@ -35,7 +35,7 @@ body {
     background: linear-gradient(135deg, var(--secondary), #2c3e50);
     display: flex;
     flex-direction: column;
-    justify-content: center, space-between, flex-start, flex-end;
+    justify-content: flex-start;
     align-items: center;
     min-height: 100vh;
     padding: 0;
@@ -48,14 +48,18 @@ body {
     border-radius: 12px;
     box-shadow: 0 10 30px rgba(0, 0, 0, 0.2);
     width: 100%;
-    max-width: 100%;
+    max-width: 450px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-sizing: border-box;
 }
 
 .login-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 15px 40px grba(0, 0, 0, 0.3);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.registro-card {
+    max-width: 700px;
 }
 
 header { 
@@ -80,17 +84,19 @@ label {
     display: block;
     font-weight: 600;
     margin-bottom: 5px;
-    color: var (--dark);
+    color: var(--dark);
 }
 
 input[type="email"],
-input[type="password"] {
+input[type="password"],
+input[type="text"],
+input[type="tel"],
+textarea,
+select {
     width: 100%;
-    padding: 12px;
+    padding: 10px 12px;
     border: 2px solid #ecf0f1;
     border-radius: 8px;
-    font-size: 14px;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 input:valid:not(:placeholder-shown) {
@@ -98,7 +104,7 @@ input:valid:not(:placeholder-shown) {
 }
 
 .checkbox {
-    display: flexbox;
+    display: flex;
     align-items: center;
     gap: 10px;
 }
@@ -214,12 +220,6 @@ textarea, select {
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-textarea:focus, select:focus {
-    outline: none;
-    border-color: var(--secondary);
-    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
-}
-
 fieldset {
     border: 2px solid #ecf0f1;
     border-radius: 8px;
@@ -239,7 +239,9 @@ fieldset {
         position: relative;
     }
 
-    .form-grid {
+}
+
+.form-grid {
         display: grid;
         grid-template-columns: 1fr;
         gap: 15px 20px;
@@ -249,4 +251,8 @@ fieldset {
     .full-width {
         grid-column: span 2;
     }
+
+.full-width {
+    grid-column: span 2;
 }
+
