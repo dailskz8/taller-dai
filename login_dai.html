@@ -6,13 +6,20 @@
        <meta name="viewport" content="width-device-width, initial-scale=1.0">
         <title> MiCRM </title>
         <link rel="stylesheet" href="estilo.css">
-        <img src="imagenes/logo-iujo.png" alt="Logo IUJO" class="logo-img">
+    
         
     </head>
 
     <body>
 
-        <main class="login-card">
+<header class="main-header">
+    <div class="logo-container">
+        <img src="imagenes/logo-iujo.png" alt="Logo IUJO" class="logo-img">
+        <h1>MiCRM</h1>
+    </div>
+</header>
+
+        <main class="container">
             <section id="login" class="login-card">
                 <header>
                     <h1>MiCRM</h1>
@@ -47,7 +54,7 @@
                 </footer>
             </section>
 
-            <section id="registro" class="login-card">
+            <section id="registro" class="login-card registro-card">
                 <header>
                     <h3>Registrarse</h3>
                 </header>
@@ -56,7 +63,7 @@
                         <label for="reg-name"> Nombre Completo</label>
                         <input type="text" id="reg-name" name="name" placeholder="Ej. Juan Perez">
                     </div>
-                </form>
+                
 
     
                 <div class="form-group">
@@ -109,6 +116,7 @@
         </div>
 
     </form>
+
 
     <footer>
         <a href="#login">¿Ya tienes cuenta? Inicia sesión</a>
